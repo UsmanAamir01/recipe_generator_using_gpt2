@@ -242,6 +242,7 @@ This project is part of a Gen AI course assignment.
 ## 👤 Author
 
 **Usman Aamir**
+
 - GitHub: [@UsmanAamir01](https://github.com/UsmanAamir01)
 - Repository: [recipe_generator_using_gpt2](https://github.com/UsmanAamir01/recipe_generator_using_gpt2)
 
