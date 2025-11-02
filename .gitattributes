@@ -1,0 +1,4 @@
+*.safetensors filter=lfs diff=lfs merge=lfs -text
+*.json filter=lfs diff=lfs merge=lfs -text
+merges.txt filter=lfs diff=lfs merge=lfs -text
+vocab.json filter=lfs diff=lfs merge=lfs -text
