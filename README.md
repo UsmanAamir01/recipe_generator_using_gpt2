@@ -2,62 +2,83 @@
 
 An interactive web application for generating creative cooking recipes using a fine-tuned GPT-2 model.
 
-## Features
+[![GitHub](https://img.shields.io/badge/GitHub-UsmanAamir01-blue?logo=github)](https://github.com/UsmanAamir01/recipe_generator_using_gpt2)
+[![Python](https://img.shields.io/badge/Python-3.8+-blue?logo=python)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B?logo=streamlit)](https://streamlit.io/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+## 🌟 Live Demo
+
+🔗 **GitHub Repository:** [https://github.com/UsmanAamir01/recipe_generator_using_gpt2](https://github.com/UsmanAamir01/recipe_generator_using_gpt2)
+
+## 📖 About
+
+This project is part of a **Generative AI Course Assignment** focused on fine-tuning decoder models for creative text generation. The application uses a GPT-2 model fine-tuned on the 3A2M_EXTENDED recipe dataset to generate coherent and creative cooking recipes from ingredients, titles, or custom prompts.
+
+## 📋 Features
 
 - **Multiple Input Modes:**
 
-  - Generate recipes from a list of ingredients
-  - Generate recipes from a dish title
-  - Use custom prompts for more control
+  - 🥗 Generate recipes from a list of ingredients
+  - 📝 Generate recipes from a dish title
+  - ✍️ Use custom prompts for more control
 
 - **Advanced Generation Settings:**
 
-  - Adjustable temperature for creativity control
-  - Top-K and Top-P sampling options
-  - Repetition penalty to avoid redundant text
-  - Configurable maximum recipe length
-  - Generate multiple recipe variations at once
+  - 🌡️ Adjustable temperature for creativity control
+  - 🎯 Top-K and Top-P sampling options
+  - 🔄 Repetition penalty to avoid redundant text
+  - 📏 Configurable maximum recipe length
+  - 🎲 Generate multiple recipe variations at once
 
 - **User-Friendly Interface:**
-  - Clean and intuitive design
-  - Real-time recipe generation
-  - Download generated recipes as text files
-  - Example prompts and usage tips
+  - 🎨 Clean and intuitive design
+  - ⚡ Real-time recipe generation
+  - 💾 Download generated recipes as text files
+  - 💡 Example prompts and usage tips
 
-## Prerequisites
+## 🚀 Quick Start
+
+### Prerequisites
 
 - Python 3.8 or higher
-- Fine-tuned GPT-2 model in `results/best_recipe_model/` directory
+- Git (for cloning the repository)
+- Git LFS (for downloading model files)
 
-## Installation
+### Installation
 
-1. **Clone or navigate to the project directory:**
+1. **Clone the repository:**
 
    ```bash
-   cd "d:\Semester 7\Gen AI\proj_3\recipe generator"
+   git clone https://github.com/UsmanAamir01/recipe_generator_using_gpt2.git
+   cd recipe_generator_using_gpt2
    ```
 
-2. **Install required dependencies:**
+2. **Install Git LFS and pull model files:**
+
+   ```bash
+   git lfs install
+   git lfs pull
+   ```
+
+3. **Install required dependencies:**
    ```bash
    pip install -r requirements.txt
    ```
 
-## Running the App
+### Running the App
 
-1. **Make sure your model is in the correct location:**
-
-   - The app expects the model at: `results/best_recipe_model/`
-   - Ensure all model files are present (config.json, model.safetensors, tokenizer files, etc.)
-
-2. **Launch the Streamlit app:**
+1. **Launch the Streamlit app:**
 
    ```bash
    streamlit run app.py
    ```
 
-3. **Open your browser:**
+2. **Open your browser:**
    - The app will automatically open in your default browser
    - Default URL: http://localhost:8501
+
+**Alternative (Windows):** Double-click `run_app.bat` for automatic setup and launch.
 
 ## How to Use
 
@@ -134,31 +155,53 @@ Adjust these parameters in the sidebar to fine-tune the generation:
 - Increase repetition penalty
 - Use more specific prompts
 
-## File Structure
+## 📁 File Structure
 
 ```
-recipe generator/
+recipe_generator_using_gpt2/
 ├── app.py                          # Main Streamlit application
 ├── requirements.txt                # Python dependencies
-├── README.md                      # This file
+├── README.md                       # Documentation
+├── run_app.bat                     # Windows quick-start script
+├── .gitignore                      # Git ignore rules
+├── .gitattributes                  # Git LFS configuration
 └── results/
-    └── best_recipe_model/         # Fine-tuned GPT-2 model
+    └── best_recipe_model/          # Fine-tuned GPT-2 model
         ├── config.json
         ├── generation_config.json
         ├── merges.txt
-        ├── model.safetensors
+        ├── model.safetensors       # (Tracked with Git LFS)
         ├── special_tokens_map.json
         ├── tokenizer_config.json
-        └── vocab.json
+        └── vocab.json              # (Tracked with Git LFS)
 ```
 
-## Technical Details
+## 🔧 Technical Details
 
 - **Model:** Fine-tuned GPT-2 (124M parameters)
-- **Framework:** Hugging Face Transformers
+- **Dataset:** [3A2M_EXTENDED](https://www.kaggle.com/datasets/nazmussakibrupol/3a2mext/data) from Kaggle
+- **Framework:** Hugging Face Transformers 4.35+
 - **UI Framework:** Streamlit
 - **Backend:** PyTorch
 - **Tokenizer:** GPT2Tokenizer
+- **Storage:** Git LFS for large model files
+
+## 🎓 Project Context
+
+This project fulfills the **Task 1: Decoder Model (GPT-2) — Recipe Generation** requirement for a Generative AI course assignment.
+
+### Deliverables Completed:
+
+✅ Tokenization and dataset formatting script  
+✅ Training loop for GPT-2  
+✅ Example generations and quality evaluation (ROUGE, BLEU)  
+✅ **Streamlit app for interactive recipe generation**
+
+### Dataset Information:
+
+- **Source:** [Kaggle - 3A2M_EXTENDED](https://www.kaggle.com/datasets/nazmussakibrupol/3a2mext/data)
+- **Size:** 50+ MB of recipe data
+- **Content:** Recipe titles, ingredients, and cooking instructions
 
 ## Example Prompts
 
@@ -185,12 +228,30 @@ Quick 15-minute dinner with pasta
 Dessert using chocolate and strawberries
 ```
 
-## License
+## 📄 License
 
 This project is part of a Gen AI course assignment.
 
-## Acknowledgments
+## 🙏 Acknowledgments
 
-- Dataset: 3A2M_EXTENDED from Kaggle
-- Model: GPT-2 by OpenAI
-- Framework: Hugging Face Transformers
+- **Dataset:** [3A2M_EXTENDED](https://www.kaggle.com/datasets/nazmussakibrupol/3a2mext/data) from Kaggle
+- **Model:** GPT-2 by OpenAI
+- **Framework:** Hugging Face Transformers
+- **UI:** Streamlit
+
+## 👤 Author
+
+**Usman Aamir**
+- GitHub: [@UsmanAamir01](https://github.com/UsmanAamir01)
+- Repository: [recipe_generator_using_gpt2](https://github.com/UsmanAamir01/recipe_generator_using_gpt2)
+
+## 🤝 Contributing
+
+This is an academic project, but suggestions and feedback are welcome! Feel free to open an issue or submit a pull request.
+
+---
+
+<div align="center">
+  <p>Made with ❤️ using Streamlit and GPT-2</p>
+  <p>⭐ Star this repo if you find it helpful!</p>
+</div>
